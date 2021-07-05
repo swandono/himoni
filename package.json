@@ -1,27 +1,32 @@
 {
 	"name": "himoni",
-	"version": "0.0.2",
+	"version": "0.0.1",
+	"description": "Simple chatbot for all",
+	"main": "index.js",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
-	},
-	"dependencies": {
-		"next": "10.2.3",
-		"react": "17.0.2",
-		"react-dom": "17.0.2"
-	},
-	"devDependencies": {
-		"@types/react": "17.0.9",
-		"typescript": "4.3.2"
-	},
-	"author": {
-		"name": "Gunawan Probo Swandono",
-		"url": "https://swandono.com"
+		"start": "node dist/himoni.js",
+		"pm2": "pm2 start dist/himoni.js",
+		"build": "ttsc",
+		"watch": "pm2 start dist/himoni.js --watch",
+		"dev-watch": "ttsc --watch"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/swandono/himoni.git"
+		"url": "git@github.com-swandono:swandono/himoni.git"
 	},
-	"license": "MIT License"
+	"keywords": [
+		"chatbot"
+	],
+	"author": "Gunawan Probo Swandono",
+	"license": "MIT",
+	"devDependencies": {
+		"jsdoc": "^3.6.6",
+		"ts-node": "^9.1.1",
+		"ttypescript": "^1.5.12",
+		"typescript": "^4.1.5",
+		"typescript-transform-paths": "^2.2.3"
+	},
+	"dependencies": {
+		"fastify": "^3.18.1"
+	}
 }
